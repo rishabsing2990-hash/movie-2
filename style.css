@@ -1,0 +1,747 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body 
+{
+    width:100%;
+    height: 100vh;
+    background:rgb(83, 83,83) ;
+    font-family:'Poppins', sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header
+{
+    width:100%;
+    height:100%;
+    /* border: 1px solid white; */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0px 25px -8px #000; 
+    position: absolute;
+}
+
+header::before
+{
+    content: '';
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: url('img/money\ heist1.jpg') no-repeat center / cover;
+    /* filter: blur(5px); */
+    z-index:-1;
+    opacity: 0.9;
+}
+
+header::after
+ {
+    content: '';
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: linear-gradient(180deg,transparent,#000);
+    /* filter: blur(5px);  */
+    z-index:-1; 
+    opacity: 0.6;  
+}
+
+header video
+{
+     position: absolute;
+    width:133%;
+    height:162%;
+    top:-39%;
+    z-index: -1;
+    border-radius: 20px; 
+     object-fit: cover; 
+     overflow: hidden; 
+}
+
+header nav
+{
+    width: 100%;
+    height: 10%;
+    border: 1px solid #fff ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+    border-radius: 20px;
+}
+header nav .logo_ul
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+header nav .logo_ul ul
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav .logo_ul li
+{
+  padding: 3px 15px;
+}
+
+header nav .logo_ul li a
+{
+    text-decoration: none;
+    color:#fff;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+header nav .logo_ul li a:hover
+{
+    color:rgba(255, 7, 7, 0.7);
+} 
+
+
+header nav .filter ul
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    color:#fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+header nav .filter li
+{
+  padding: 3px 15px;
+}
+
+header nav .filter li a
+{
+    text-decoration: none;
+    color:#fff;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+header nav .filter li a:hover
+{
+    color:rgba(255, 7, 7, 0.7);
+} 
+header nav .search_user
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+header nav .search_user a
+{  
+     margin-left:15px ;
+    color: #fff;
+}
+
+header nav .search_user input
+{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    margin-right: 10px;
+}
+
+header nav .search_user input::placeholder
+{
+    color: #fff;
+}
+
+header nav .search_user img
+{
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+header nav .search_user .search
+{
+    position: absolute;
+    width: 320px;
+    height: 220px;
+    /* border: 1px solid #fff; */
+    right:0;
+    top:40px;
+    z-index: 3;
+    overflow-y: auto;
+}
+
+header nav .search_user .search::-webkit-scrollbar
+{   display: none;
+    width: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    visibility: hidden;
+}
+header nav .search_user .search::-webkit-scrollbar-thumb
+{
+    width: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+ header nav .search_user .search .card
+{
+    position: relative;
+    width:100%;
+    height:50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 3px 0px;
+    text-decoration: none;
+    display: none;
+}
+
+
+ header nav .search_user .search .card::before
+{
+    content:'';
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    backdrop-filter: blur(1.5px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    z-index:-1; 
+   
+}
+
+ header nav .search_user .search .card img
+{
+     width:28px;
+     height:90%;
+     border-radius: 2px;
+     margin-left: 6px;
+
+}
+
+header nav .search_user .search .card .cont
+{
+    margin-left: 10px;
+    color:#fff;
+}
+
+header nav .search_user .search .card .cont h3
+{
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 600; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+}
+
+
+ header nav .search_user .search .card .cont p
+{
+    font-size: 10px;
+    color:rgba(255, 255, 255, 0.8);
+}
+
+header nav .search_user .search .card .cont span
+{
+    background: yellow;
+    color: #000;
+    font-size: 10px;
+    padding: 0px 3px;
+    margin: 0px 5px;
+    font-weight: 500;
+}
+header .content
+{
+    position: absolute;
+    margin-top: 20px;
+    color: #fff;
+    padding-left:  30px;
+}
+
+header .content h1
+{
+    font-size: 55px;
+}
+
+header .content p
+{
+    font-size: 14px;
+    width: 350px;
+    word-break: break-all;
+    
+}
+
+header .content .details
+{
+   display: flex;
+   align-items: center;
+   margin-top: 10px;
+}
+
+header .content .details h6
+{
+   color:rgba(255, 255, 255, 0.8);
+   font-size: 11px;
+   margin-right: 10px;
+}
+
+header .content .details h5
+{
+   color:rgba(142, 230, 48);
+   font-size: 12px;
+   margin-right: 10px;
+}
+
+header .content .details h6
+{
+   color:#fff;
+   font-size: 10px;
+   margin-right: 10px;
+}
+
+header .content .details h6
+{
+   color:#fff;
+   display: flex;
+   align-items: center;
+   margin-right: 10px;
+}
+
+header .content .details h3 span
+{
+    background: yellow;
+    color: #000;
+    font-size: 11px;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 5px;
+    font-weight: 500;
+}
+
+header .content .details h3 
+{
+    font-size: 11px;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 5px;
+    font-weight: 500;
+}
+
+header section
+{
+    position:absolute;
+    width:100%;
+    height:auto;
+    padding: 0px 10px;
+    bottom: 20px;
+    color:#fff;
+}
+
+header section h4
+{
+    margin-left:30px;
+    /* margin-bottom:px; */
+}
+
+header  .content .button-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start; /* optional: aligns buttons to the left */
+}
+ 
+header .content .play-button 
+{
+  margin-top:4px;;
+  font-size:14px;
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition:  transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+} 
+
+ header .content .play-button:hover {
+  background-color: rgb(255, 47, 47);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+header .content .download-button 
+{
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  background-color:whitesmoke;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+} 
+
+  header .content .download-button:hover {
+  background-color: rgb(255, 47, 47);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+ } 
+header section .cards
+{
+   position: relative; 
+   width: 1460px;
+   height: 200px ;
+   margin-top: 10px;
+   display: flex;
+   align-items: center;
+   overflow-x:auto; 
+   scroll-behavior: smooth;
+}
+
+header section .cards::-webkit-scrollbar
+{
+    display: none;
+}
+
+header section .cards .card
+{
+   position: relative; 
+   min-width: 130px;
+   height:180px ;
+   border-radius:8px ;
+   margin-right: -16px;
+   margin-left: 30px;
+   transition: .3s linear;
+
+} 
+
+header section .cards .card .poster
+{
+   position: relative; 
+   width: 130px;
+   height:100% ;
+   border: 1px solid #fff;
+   border-radius:8px ;
+} 
+header section .cards .card:hover 
+{
+
+   height:200px;
+   min-width: 200px;
+   overflow-x:hidden;
+   overflow-y: hidden;
+  
+} 
+
+header section .cards .card .restcard
+{
+   position: absolute;
+   width: 100%;
+   height:100%;
+   border-radius:8px ;
+   left: 0;
+   top: 0;
+   z-index: 99999;
+   opacity: 0;
+   transition: 1s linear;
+} 
+
+header section .cards .card .restcard img
+{
+   position: relative;
+   width: 100%;
+   height:100%;
+   border-radius:8px ;
+   z-index: -1;
+
+}
+
+header section .cards .card .restcard::after
+{
+    content: '';
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: linear-gradient(180deg,transparent,#000);
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+header section .cards .card .restcard .cont
+{
+    position: absolute;
+    width: 100%;
+    bottom: 8px;
+    left: 0;
+    color: #fff;
+    padding: 0px 20px;
+}
+
+header section .cards .card .restcard .cont .sub 
+{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+header section .cards .card .restcard .cont .sub p
+{
+    font-size:12px;
+    font-weight: 400;
+    color:rgba(255, 255, 255, 0.7)
+}
+
+header section .cards .card .restcard .cont .sub h3
+{
+ color: #fff;
+ font-size:12px;
+ display: flex;
+ align-items: center;
+}
+
+header section .cards .card .restcard .cont .sub span
+{
+    background: yellow;
+    color: #000;
+    font-size: 10px;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 5px;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+header section .cards .card:hover .restcard
+{
+    opacity: 1;
+}
+
+ header  section .bi-chevron-left,
+.bi-chevron-right
+{
+   position: absolute;
+   top: 50%;
+   left:1%;
+   width: 25px;
+   height: 25px;
+   background:rgba(255, 255, 255, 0.3) ;
+   color: #fff;
+   display: flex;
+   justify-content: center;
+   border-radius: 50%;
+   font: size 12px; 
+   cursor: pointer;
+   transition: .3s linear;
+   z-index: 99999999;
+   opacity: 0;
+}
+
+header  section .bi-chevron-right
+{
+  left: unset;
+  right: 2%;
+} 
+
+header  section:hover .bi-chevron-right
+{
+    opacity: 1;
+} 
+
+header  section:hover .bi-chevron-left
+{
+    opacity: 1; 
+}
+@media (max-width: 1024px) {
+  header .content h1 {
+    font-size: 40px;
+  }
+
+  header .content p {
+    width: 300px;
+  }
+
+  header section .cards {
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  header nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  header nav .logo_ul ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header nav .search_user {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 770px) {
+  header video {
+    width: 180%;
+    height: auto;
+    top: -60%;
+  }
+
+  header .content h1 {
+    font-size: 32px;
+  }
+
+  header .content p {
+    font-size: 12px;
+    width: 250px;
+  }
+
+  header section .cards {
+    flex-direction: column;
+    height: auto;
+    overflow-x: visible;
+  }
+
+  header section .cards .card {
+    margin: 10px auto;
+    min-width: 80%;
+    height: 200px;
+  }
+
+  header section .cards .card:hover {
+    min-width: 90%;
+    height: 220px;
+  }
+
+  header nav .search_user input {
+    width: 80%;
+  }
+
+  header nav .search_user img {
+    margin-left: 0;
+  }
+
+  header nav .search_user a {
+    margin-left: 0;
+  }
+
+  header section .bi-chevron-left,
+  header section .bi-chevron-right {
+    display: none;
+  }
+}
+
+@media (max-width: 485px) {
+  header {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  header .content {
+    padding: 20px;
+    margin-top: 60px;
+  }
+
+  header .content h1 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  header .content p {
+    font-size: 11px;
+    width: 100%;
+  }
+
+  header nav {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  header nav .logo_ul ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  header nav .search_user {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  header nav .search_user input {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  header section .cards {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    overflow-x: hidden;
+    padding: 10px;
+  }
+
+  header section .cards .card {
+    width: 90%;
+    height: 220px;
+    margin: 10px 0;
+  }
+
+  header section .cards .card:hover {
+    width: 95%;
+    height: 240px;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  #modal-poster {
+    width: 100%;
+    height: auto;
+  }
+}
